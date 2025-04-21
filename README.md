@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
 
-## Project info
+# Flutter Nexus Mobile Hub
 
-**URL**: https://lovable.dev/projects/821ac29b-b794-4a0e-8a48-271b4371d3a5
+A comprehensive Flutter mobile application demonstrating various Android mobile development concepts, built for MAM66-Mobile and Application Development Lab Assessment II.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+The application implements all the required elements for the assessment:
 
-**Use Lovable**
+1. **Appropriate Layout** - Material Design with custom UI components, responsive design, and proper navigation.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/821ac29b-b794-4a0e-8a48-271b4371d3a5) and start prompting.
+2. **Database Connectivity** - SQLite database implementation using the `sqflite` package for local storage of tasks.
 
-Changes made via Lovable will be committed automatically to this repo.
+3. **Notification Settings** - Local notifications management using `flutter_local_notifications` with options to schedule and customize notifications.
 
-**Use your preferred IDE**
+4. **Multithreading Concept** - Isolate implementation for performing heavy computations without blocking the UI thread.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+5. **GPS Location Information** - Location tracking using `geolocator` and `geocoding` packages to get coordinates and address information.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+6. **RSS Feed for Website** - RSS feed reader with the ability to fetch and display content from any RSS feed URL.
 
-Follow these steps:
+7. **Sending and Receiving Email** - Email functionality using `flutter_email_sender` to compose and send emails.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+8. **Innovation in the Project** - Voice command system using speech recognition (`speech_to_text`) and text-to-speech (`flutter_tts`) for hands-free app control.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Project Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
+- `lib/main.dart`: Entry point of the application
+- `lib/models/`: Data models for the application
+- `lib/providers/`: State management using Provider
+- `lib/screens/`: All UI screens of the application
+- `lib/utils/`: Utility services for various functionalities
+- `assets/`: Application assets (images, etc.)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Screens
 
-**Edit a file directly in GitHub**
+1. **Home Screen**: Navigation hub with cards for each feature
+2. **Database Screen**: Task management with SQLite
+3. **Notification Screen**: Notification settings and scheduling
+4. **Multithreading Screen**: Demo of UI vs background thread processing
+5. **Location Screen**: GPS location tracking and display
+6. **RSS Screen**: RSS feed reader
+7. **Email Screen**: Email composition and sending
+8. **Voice Command Screen**: Innovative voice control feature
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Technical Implementation
 
-**Use GitHub Codespaces**
+- **State Management**: Provider pattern for app-wide state
+- **Database**: SQLite with sqflite package
+- **Navigation**: Material route-based navigation
+- **Concurrency**: Isolates for background processing
+- **Location Services**: Geolocator and Geocoding
+- **Networking**: HTTP requests for RSS feeds
+- **Speech Recognition**: Speech-to-text and text-to-speech
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Requirements
 
-## What technologies are used for this project?
+- Flutter SDK: >=2.19.0 <3.0.0
+- Android SDK: 21+
+- iOS 11+
 
-This project is built with:
+## Dependencies
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- provider: ^6.0.5
+- sqflite: ^2.2.8+4
+- flutter_local_notifications: ^14.1.1
+- geolocator: ^9.0.2
+- geocoding: ^2.1.0
+- http: ^0.13.6
+- xml: ^6.3.0
+- flutter_email_sender: ^6.0.1
+- speech_to_text: ^6.1.1
+- flutter_tts: ^3.6.3
+- and more...
 
-## How can I deploy this project?
+## Installation and Running
 
-Simply open [Lovable](https://lovable.dev/projects/821ac29b-b794-4a0e-8a48-271b4371d3a5) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Clone the repository
+2. Run `flutter pub get` to install dependencies
+3. Connect a device or emulator
+4. Run `flutter run` to start the application
